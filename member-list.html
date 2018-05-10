@@ -45,80 +45,80 @@
         <button class="layui-btn" onclick="x_admin_show('添加用户','./member-add.html',600,400)"><i class="layui-icon"></i>添加</button>
         <span class="x-right" style="line-height:40px">共有数据：88 条</span>
       </xblock>
-      <table class="layui-table">
-        <thead>
-          <tr>
-            <th>
-              <div class="layui-unselect header layui-form-checkbox" lay-skin="primary"><i class="layui-icon">&#xe605;</i></div>
-            </th>
-            <th>ID</th>
-            <th>用户名</th>
-            <th>性别</th>
-            <th>手机</th>
-            <th>邮箱</th>
-            <th>地址</th>
-            <th>加入时间</th>
-            <th>状态</th>
-            <th>操作</th></tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>
-              <div class="layui-unselect layui-form-checkbox" lay-skin="primary" data-id='2'><i class="layui-icon">&#xe605;</i></div>
-            </td>
-            <td>1</td>
-            <td>小明</td>
-            <td>男</td>
-            <td>13000000000</td>
-            <td>admin@mail.com</td>
-            <td>北京市 海淀区</td>
-            <td>2017-01-01 11:11:42</td>
-            <td class="td-status">
-              <span class="layui-btn layui-btn-normal layui-btn-mini">已启用</span></td>
-            <td class="td-manage">
-              <a onclick="member_stop(this,'10001')" href="javascript:;"  title="启用">
-                <i class="layui-icon">&#xe601;</i>
-              </a>
-              <a title="编辑"  onclick="x_admin_show('编辑','member-edit.html',600,400)" href="javascript:;">
-                <i class="layui-icon">&#xe642;</i>
-              </a>
-              <a onclick="x_admin_show('修改密码','member-password.html',600,400)" title="修改密码" href="javascript:;">
-                <i class="layui-icon">&#xe631;</i>
-              </a>
-              <a title="删除" onclick="member_del(this,'要删除的id')" href="javascript:;">
-                <i class="layui-icon">&#xe640;</i>
-              </a>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <div class="layui-unselect layui-form-checkbox" lay-skin="primary" data-id='2'><i class="layui-icon">&#xe605;</i></div>
-            </td>
-            <td>1</td>
-            <td>小明</td>
-            <td>男</td>
-            <td>13000000000</td>
-            <td>admin@mail.com</td>
-            <td>北京市 海淀区</td>
-            <td>2017-01-01 11:11:42</td>
-            <td class="td-status">
-              <span class="layui-btn layui-btn-normal layui-btn-mini">已启用</span></td>
-            <td class="td-manage">
-              <a onclick="member_stop(this,'10001')" href="javascript:;"  title="启用">
-                <i class="layui-icon">&#xe601;</i>
-              </a>
-              <a title="编辑"  onclick="x_admin_show('编辑','member-edit.html',600,400)" href="javascript:;">
-                <i class="layui-icon">&#xe642;</i>
-              </a>
-              <a onclick="x_admin_show('修改密码','member-password.html',600,400)" title="修改密码" href="javascript:;">
-                <i class="layui-icon">&#xe631;</i>
-              </a>
-              <a title="删除" onclick="member_del(this,'要删除的id')" href="javascript:;">
-                <i class="layui-icon">&#xe640;</i>
-              </a>
-            </td>
-          </tr>
-        </tbody>
+      <table id="demo">
+        <!--<thead>-->
+          <!--<tr>-->
+            <!--<th>-->
+              <!--<div class="layui-unselect header layui-form-checkbox" lay-skin="primary"><i class="layui-icon">&#xe605;</i></div>-->
+            <!--</th>-->
+            <!--<th>ID</th>-->
+            <!--<th>用户名</th>-->
+            <!--<th>性别</th>-->
+            <!--<th>手机</th>-->
+            <!--<th>邮箱</th>-->
+            <!--<th>地址</th>-->
+            <!--<th>加入时间</th>-->
+            <!--<th>状态</th>-->
+            <!--<th>操作</th></tr>-->
+        <!--</thead>-->
+        <!--<tbody>-->
+          <!--<tr>-->
+            <!--<td>-->
+              <!--<div class="layui-unselect layui-form-checkbox" lay-skin="primary" data-id='2'><i class="layui-icon">&#xe605;</i></div>-->
+            <!--</td>-->
+            <!--<td>1</td>-->
+            <!--<td>小明</td>-->
+            <!--<td>男</td>-->
+            <!--<td>13000000000</td>-->
+            <!--<td>admin@mail.com</td>-->
+            <!--<td>北京市 海淀区</td>-->
+            <!--<td>2017-01-01 11:11:42</td>-->
+            <!--<td class="td-status">-->
+              <!--<span class="layui-btn layui-btn-normal layui-btn-mini">已启用</span></td>-->
+            <!--<td class="td-manage">-->
+              <!--<a onclick="member_stop(this,'10001')" href="javascript:;"  title="启用">-->
+                <!--<i class="layui-icon">&#xe601;</i>-->
+              <!--</a>-->
+              <!--<a title="编辑"  onclick="x_admin_show('编辑','member-edit.html',600,400)" href="javascript:;">-->
+                <!--<i class="layui-icon">&#xe642;</i>-->
+              <!--</a>-->
+              <!--<a onclick="x_admin_show('修改密码','member-password.html',600,400)" title="修改密码" href="javascript:;">-->
+                <!--<i class="layui-icon">&#xe631;</i>-->
+              <!--</a>-->
+              <!--<a title="删除" onclick="member_del(this,'要删除的id')" href="javascript:;">-->
+                <!--<i class="layui-icon">&#xe640;</i>-->
+              <!--</a>-->
+            <!--</td>-->
+          <!--</tr>-->
+          <!--<tr>-->
+            <!--<td>-->
+              <!--<div class="layui-unselect layui-form-checkbox" lay-skin="primary" data-id='2'><i class="layui-icon">&#xe605;</i></div>-->
+            <!--</td>-->
+            <!--<td>1</td>-->
+            <!--<td>小明</td>-->
+            <!--<td>男</td>-->
+            <!--<td>13000000000</td>-->
+            <!--<td>admin@mail.com</td>-->
+            <!--<td>北京市 海淀区</td>-->
+            <!--<td>2017-01-01 11:11:42</td>-->
+            <!--<td class="td-status">-->
+              <!--<span class="layui-btn layui-btn-normal layui-btn-mini">已启用</span></td>-->
+            <!--<td class="td-manage">-->
+              <!--<a onclick="member_stop(this,'10001')" href="javascript:;"  title="启用">-->
+                <!--<i class="layui-icon">&#xe601;</i>-->
+              <!--</a>-->
+              <!--<a title="编辑"  onclick="x_admin_show('编辑','member-edit.html',600,400)" href="javascript:;">-->
+                <!--<i class="layui-icon">&#xe642;</i>-->
+              <!--</a>-->
+              <!--<a onclick="x_admin_show('修改密码','member-password.html',600,400)" title="修改密码" href="javascript:;">-->
+                <!--<i class="layui-icon">&#xe631;</i>-->
+              <!--</a>-->
+              <!--<a title="删除" onclick="member_del(this,'要删除的id')" href="javascript:;">-->
+                <!--<i class="layui-icon">&#xe640;</i>-->
+              <!--</a>-->
+            <!--</td>-->
+          <!--</tr>-->
+        <!--</tbody>-->
       </table>
       <div class="page">
         <div>
@@ -133,9 +133,9 @@
 
     </div>
     <script>
-      layui.use('laydate', function(){
+      layui.use(['laydate','table'], function(){
         var laydate = layui.laydate;
-        
+        var table = layui.table;
         //执行一个laydate实例
         laydate.render({
           elem: '#start' //指定元素
@@ -145,7 +145,27 @@
         laydate.render({
           elem: '#end' //指定元素
         });
+
+          table.render({
+              elem: '#demo'
+              ,height: 500
+              ,url: 'data/btable_data.json' //数据接口
+              // ,page: true //开启分页
+              ,cols: [[ //表头
+                  {field: 'id', title: 'ID', width: '2.5%', sort: true, fixed: 'left'}
+                  ,{field: 'username', title: '用户名', width:'10%'}
+                  ,{field: 'sex', title: '性别', width:'10%', sort: true}
+                  ,{field: 'city', title: '城市', width:'10%'}
+                  ,{field: 'sign', title: '签名', width: '20%'}
+                  ,{field: 'experience', title: '积分', width: '10%', sort: true}
+                  ,{field: 'score', title: '评分', width: '10%', sort: true}
+                  ,{field: 'classify', title: '职业', width: '15%'}
+                  ,{field: 'wealth', title: '财富', width: '11.5%', sort: true}
+              ]]
+          });
       });
+
+
 
        /*用户-停用*/
       function member_stop(obj,id){

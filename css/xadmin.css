@@ -26,13 +26,11 @@ body{
     overflow: hidden;
 }
 .login{
-    margin: 120px auto 0 auto;
+    margin: 120px auto 0;
     min-height: 420px;
     max-width: 420px;
     padding: 40px;
     background-color: #ffffff;
-    margin-left: auto;
-    margin-right: auto;
     border-radius: 4px;
     /* overflow-x: hidden; */
     box-sizing: border-box;
@@ -45,9 +43,9 @@ body{
     background-size: 167px 42px;
 }
 .login .message {
-    margin: 10px 0 0 -58px;
+    margin: 10px 0 0 0;
     padding: 18px 10px 18px 60px;
-    background: #189F92;
+    background: #77c4f8;
     position: relative;
     color: #fff;
     font-size: 16px;
@@ -56,7 +54,7 @@ body{
     background: url(../images/aiwrap.png);
     width: 18px;
     height: 10px;
-    margin: 0 0 20px -58px;
+    margin: 0 0 20px 0;
     position: relative;
 }
 
@@ -94,7 +92,7 @@ body{
     vertical-align: middle;
     cursor: pointer;
     color: #ffffff;
-    background-color: #189F92;
+    background-color:#77c4f8;
     border-radius: 3px;
     border: none;
     -webkit-appearance: none;
@@ -102,7 +100,7 @@ body{
     width:100%;
 }
 .login hr {
-	/*background: #fff url() 0 0 no-repeat;*/
+	background: #fff;
 }
 .login hr.hr15 {
     height: 15px;
@@ -165,7 +163,7 @@ xblock{
 }
 .page a{
 	display: inline-block;
-	/*background: #fff url() 0 0 no-repeat;*/
+	background: #fff;
 	color: #888;
 	padding: 10px;
 	min-width: 15px;
@@ -180,7 +178,7 @@ xblock{
 }
 .page span.current{
 	display: inline-block;
-	/*background: #009688 url() 0 0 no-repeat;*/
+	background: #009688;
 	color: #fff;
 	padding: 10px;
 	min-width: 15px;
@@ -192,7 +190,7 @@ xblock{
 	text-align: center;
 }
 .page .pagination li.active span{
-	/*background: #009688 url() 0 0 no-repeat;*/
+	background: #009688;
 	color: #fff;
 	border: 1px solid #009688;
 
@@ -225,7 +223,7 @@ xblock{
 }
 .container .left_open i{
 	display: block;
-	/*background: rgba(255,255,255,0.1) url() 0 0 no-repeat;*/
+	background: rgba(255,255,255,0.1);
 	color: #fff;
 	width: 32px;
 	height: 32px;
@@ -236,7 +234,7 @@ xblock{
 	cursor: pointer;
 }
 .container .left_open i:hover{
-	/*background: rgba(255,255,255,0.3) url() 0 0 no-repeat;*/
+	background: rgba(255,255,255,0.3);
 }
 
 .container .left{
@@ -360,7 +358,7 @@ xblock{
     right: 0;
     bottom: 42px;
     left: 221px;
-    background: rgba(0,0,0,0.5); url() 0 0 no-repeat;
+    background: rgba(0,0,0,0.5);
     overflow: hidden;
     z-index: 100;
     display: none;
@@ -369,13 +367,13 @@ xblock{
 .page-content .tab{
 	height: 100%;
 	width: 100%;
-	/*background: #EFEEF0 url() 0 0 no-repeat;*/
+	background: #EFEEF0;
 	margin: 0px;
 }
 .page-content .layui-tab-title{
 	/*padding-top: 5px;*/
 	height: 35px;
-	/*background: #EFEEF0 url() 0 0 no-repeat;*/
+	background: #EFEEF0;
 	position: relative;
 	z-index: 100;
 }
@@ -389,7 +387,7 @@ xblock{
 	border-radius: 50%;
 }
 .page-content .layui-tab-title .layui-this{
-	/*background: #fff url() 0 0 no-repeat;*/
+	background: #fff;
 }
 .page-content .layui-tab-bar{
 	height:34px;
@@ -400,7 +398,7 @@ xblock{
 	top: 36px;
 	bottom: 0px;
 	width: 100%;
-	/*background: #fff url() 0 0 no-repeat;*/
+	background: #fff;
 	padding: 0px;
 	overflow: hidden;
 }

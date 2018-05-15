@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/新建文件夹.iml" filepath="$PROJECT_DIR$/.idea/新建文件夹.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/admin.iml" filepath="$PROJECT_DIR$/.idea/admin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../view/.idea/admin.iml" filepath="$PROJECT_DIR$/../view/.idea/admin.iml" />
     </modules>
   </component>
 </project>

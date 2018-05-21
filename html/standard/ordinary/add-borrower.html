@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>添加标-借款人</title>
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+    <link rel="stylesheet" href="../../../lib/layui/css/layui.css">
+    <link rel="stylesheet" href="../../../css/xadmin.css">
+    <link rel="stylesheet" href="../../../css/party-icon/thirdParty-icon.css">
+
+    <script src="../../../js/jquery-1.8.3.min.js"></script>
+    <script src="../../../lib/layui/layui.js" charset="utf-8"></script>
+    <script src="../../../js/xadmin.js" type="text/javascript"></script>
+</head>
+<body>
+    <div class="x-nav">
+                  <span class="layui-breadcrumb">
+                    <a href="javascript:;">标的管理</a>
+                    <a href="javascript:;">普通标</a>
+                    <a><cite>添加标借款人</cite></a>
+                  </span>
+        <a class="layui-btn layui-btn-small" style="line-height:1.6em;margin-top:3px;float:right"
+           href="javascript:location.replace(location.href);" title="刷新">
+            <i class="layui-icon" style="line-height:30px">ဂ</i></a>
+    </div>
+    <div class="x-body">
+        <div class="layui-progress layui-progress-big" lay-showpercent="true">
+            <div class="layui-progress-bar" lay-percent="25%"></div>
+        </div>
+
+        <form class="layui-form layui-form-pane" action="">
+            <div class="sbuBtnBox">
+                <button class="layui-btn x-bg-lightGreen" lay-submit="" lay-filter="demo1" onclick="clickJump('add-introduce.html')"><i class="layui-icon">&#xe642;</i>提交</button>
+            </div>
+            <div class="layui-form-item x-fontSize-16 x-m-bot-20 x-fontWeight">
+                借款人信息
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-inline">
+                    <label class="layui-form-label">借款标题</label>
+                    <div class="layui-input-inline">
+                        <input type="text" name="phone" lay-verify="title" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <div class="layui-inline">
+                    <label class="layui-form-label">借款人</label>
+                    <div class="layui-input-inline">
+                        <select name="quiz">
+                            <option value="">请选择</option>
+                            <option value="1">张三</option>
+                            <option value="2">李四</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="layui-inline">
+                    <label class="layui-form-label">还款类型</label>
+                    <div class="layui-input-inline">
+                        <select name="modules">
+                            <option value="">请选择</option>
+                            <option value="1">普通标</option>
+                            <option value="2">天标</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <div class="layui-inline">
+                    <label class="layui-form-label">还款期限</label>
+                    <div class="layui-input-inline">
+                        <input type="number" name="phone" lay-verify="required|number" autocomplete="off" class="layui-input">
+                        <span>月</span>
+                    </div>
+                </div>
+                <div class="layui-inline">
+                    <label class="layui-form-label">借款金额</label>
+                    <div class="layui-input-inline">
+                        <input type="number" name="email" lay-verify="required|number" autocomplete="off" class="layui-input">
+                        <span>元</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <div class="layui-inline">
+                    <label class="layui-form-label">标种子类型</label>
+                    <div class="layui-input-inline">
+                        <select name="quiz">
+                            <option value="">请选择</option>
+                            <option value="1">质押</option>
+                            <option value="2">保证</option>
+                            <option value="3">抵押</option>
+                            <option value="4">信用</option>
+                            <option value="5">实地</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="layui-inline">
+                    <label class="layui-form-label">风险评估</label>
+                    <div class="layui-input-inline">
+                        <select name="modules">
+                            <option value="">请选择</option>
+                            <option value="1">低</option>
+                            <option value="2">中</option>
+                            <option value="3">高</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <div class="layui-inline">
+                    <label class="layui-form-label">约定年利率</label>
+                    <div class="layui-input-inline">
+                        <input type="number" name="phone" lay-verify="required|number" autocomplete="off" class="layui-input">
+                        <span>%</span>
+                    </div>
+                </div>
+                <div class="layui-inline">
+                    <label class="layui-form-label">加息利率</label>
+                    <div class="layui-input-inline">
+                        <input type="number" name="email" lay-verify="required|number" autocomplete="off" class="layui-input">
+                        <span>%</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <div class="layui-inline">
+                    <label class="layui-form-label">担保方</label>
+                    <div class="layui-input-inline">
+                        <input type="text" name="phone" lay-verify="title" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-inline">
+                    <label class="layui-form-label">借款用途</label>
+                    <div class="layui-input-inline">
+                        <input type="text" name="email" lay-verify="title" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <div class="layui-inline">
+                    <label class="layui-form-label">还款方式</label>
+                    <div class="layui-input-inline">
+                        <select name="quiz">
+                            <option value="">请选择</option>
+                            <option value="1">按月等额本息</option>
+                            <option value="2">按月付息到期还本</option>
+                            <option value="3">到期一次性还本息</option>
+                            <option value="4">前四期等息，后四期等本</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="layui-inline">
+                    <label class="layui-form-label">借款标类型</label>
+                    <div class="layui-input-inline">
+                        <select name="modules">
+                            <option value="">请选择</option>
+                            <option value="1">企业贷</option>
+                            <option value="2">车商贷</option>
+                            <option value="3">个人贷</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <div class="layui-inline">
+                    <label class="layui-form-label">招标截止日期</label>
+                    <div class="layui-input-inline">
+                    <input type="text" class="layui-input" id="test1" placeholder="yyyy-MM-dd">
+                    </div>
+                </div>
+                <div class="layui-inline">
+                    <label class="layui-form-label">招标期限</label>
+                    <div class="layui-input-inline">
+                        <input type="text" name="email" disabled="disabled" value="7天" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <div class="layui-inline">
+                    <label class="layui-form-label">是否可以债权转让</label>
+                    <div class="layui-input-inline">
+                        <select name="quiz">
+                            <option value="">请选择</option>
+                            <option value="1">是</option>
+                            <option value="2">否</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="layui-inline">
+                    <label class="layui-form-label">推荐到首页</label>
+                    <div class="layui-input-inline">
+                        <select name="modules">
+                            <option value="">请选择</option>
+                            <option value="1">推荐</option>
+                            <option value="2">不推荐</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+</body>
+<script>
+    layui.use('laydate', function() {
+        var laydate = layui.laydate;
+
+        //常规用法
+        laydate.render({
+            elem: '#test1'
+        });
+    })
+</script>
+</html>

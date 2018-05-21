@@ -19,6 +19,7 @@ body{
 	width: 100%;
 	min-height: 100%;
 }
+
 .login-bg{
 	/*background: #eeeeee url() 0 0 no-repeat;*/
 	 background:url(../images/bg.png) no-repeat center;
@@ -142,7 +143,7 @@ xblock{
 }
 .x-so{
 	text-align: center;
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 }
 .x-so input.layui-input{
 	width: 190px;
@@ -153,13 +154,194 @@ xblock{
 .x-so input.layui-input,.x-so input.layui-btn{
 	display: inline-block;
 }
+
+.x-so2{
+	text-align: left;
+	margin-bottom: 20px;
+}
+.x-so2 input.layui-input{
+	width: 70%;
+}
+.x-so2 .layui-form-label{
+	display: inline-block;
+}
+.x-so2 input.layui-input,.x-so2 input.layui-btn{
+	display: inline-block;
+}
+
+.x-width-50 {
+	width: 50px;
+}
+
+.x-width-60 {
+	width: 60px;
+}
+
+.x-width-70 {
+	width: 70px;
+}
+
+.x-width-80 {
+	width: 80px;
+}
+
+.x-width-90 {
+	width: 90px;
+}
+
+.x-width-100 {
+	width: 100px;
+}
+
+.x-width-120 {
+	width: 120px;
+}
+
+.x-width-150 {
+	width: 150px;
+}
+
+.x-width-250 {
+	width: 250px;
+}
+
+.x-width-300 {
+	width: 300px;
+}
+
+x-width-500 {
+	width: 500px;
+}
+
+x-width-700 {
+	width: 700px;
+	height: 50px;
+}
+
+.x-m-top-10 {
+	margin-top: 10px;
+}
+
+.x-p-top-2 {
+	 margin-top: -2px;
+}
+
+.x-m-bot-10 {
+	margin-bottom: 10px;
+}
+
+.x-m-bot-20 {
+	margin-bottom: 20px;
+}
+
+.x-m-left-10 {
+	margin-left: 10px;
+}
+
+.x-m-left-30 {
+	margin-left: 30px;
+}
+
+.x-m-right-10 {
+	margin-right: 10px;
+}
+
+.x-m-right-30 {
+	margin-right: 30px;
+}
+
+.x-fontSize-14 {
+	font-size: 14px;
+}
+
+.x-fontSize-16 {
+	font-size: 16px;
+}
+
+.x-fontSize-18 {
+	font-size: 18px;
+}
+
+.x-fontWeight {
+	font-weight: 700;
+}
+
+.x-text-left {
+	text-align: left;
+}
+
+.x-height-38 {
+	height: 38px;
+	line-height: 38px;
+}
+
+.x-bg-red {
+	background-color: red;
+	color: #ffffff;
+}
+
+.x-bg-orange {
+	background-color: orange;
+	color: #ffffff;
+}
+
+.x-bg-yellow {
+	background-color: yellow;
+	color: #ffffff;
+}
+
+.x-bg-green {
+	background-color: green;
+	color: #ffffff;
+}
+
+.x-bg-lightGreen {
+	background-color: #40A43E;
+	color: #ffffff;
+}
+
+.x-bg-lightBlue {
+	background-color: #2AAFCA;
+	color: #ffffff;
+}
+
+.x-bg-blue {
+	background-color: blue;
+	color: #ffffff;
+}
+
+.x-bg-black {
+	background-color: black;
+	color: #ffffff;
+}
+
+.x-bg-lightGray {
+	background-color: #999999;
+	color: #ffffff;
+}
+
 .x-red{
 	color: red;
+}
+
+.x-date {
+
+}
+
+.x-date span, .x-date input {
+	display: inline-block;
+}
+
+.x-date span {
+	width: 60px;
+}
+
+.x-date input {
+	width: 200px;
 }
 .page{
 	margin-top: 20px;
 	text-align: center;
-
 }
 .page a{
 	display: inline-block;
@@ -465,3 +647,61 @@ table th, table td {
 	}
 }
 
+/*主体内容部分*/
+/*标的管理 添加标 start*/
+.sbuBtnBox {
+	float: right;
+	height: 40px;
+	margin: 20px 0;
+}
+
+.sbuBtnBox button {
+	border-radius: 5px;
+}
+.x-body .layui-form-label {
+	font-size: 14px;
+	width: 120px;
+}
+
+.layui-form-item .layui-input-inline {
+	width: 300px;
+	margin-right: 100px;
+	font-size: 13px;
+}
+
+.layui-input-inline span {
+	position: absolute;
+	right: -18px;
+	top: 12px;
+}
+
+/*图片上传*/
+.loadImgBox {
+	width: 100%;
+	border: 1px solid #e6e6e6;
+	margin: 5px 0 30px;
+}
+
+.loadImgBox .choiceImg {
+	width: 100px;
+	height: 100px;
+	margin: 10px;
+	border: 1px solid #e6e6e6;
+	overflow: hidden;
+	position: relative;
+}
+
+.choiceImg img{
+	width: 100%;
+	height: 100%;
+	background: url(" ");
+}
+
+.choiceImg input{
+	width: 100px;
+	height: 100px;
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+}

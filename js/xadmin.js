@@ -161,10 +161,26 @@ function x_admin_show(title,url,w,h){
     });
 }
 
+/*点击跳转*/
+function clickJump(url){
+
+    if (url == null || url == '') {
+        url="404.html";
+    };
+
+    window.location.href = url;
+}
+
 /*关闭弹出框口*/
 function x_admin_close(){
     var index = parent.layer.getFrameIndex(window.name);
     parent.layer.close(index);
 }
 
-
+/*获取浏览器地址栏信息*/
+function GetQueryString(name)
+{
+    var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+    var r = window.location.search.substr(1).match(reg);
+    if(r!=null)return  unescape(r[2]); return null;
+}

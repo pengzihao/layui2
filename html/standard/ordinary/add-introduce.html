@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>添加标-项目介绍</title>
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+    <link rel="stylesheet" href="../../../lib/layui/css/layui.css">
+    <link rel="stylesheet" href="../../../css/xadmin.css">
+    <link rel="stylesheet" href="../../../css/party-icon/thirdParty-icon.css">
+
+    <script src="../../../js/jquery-1.8.3.min.js"></script>
+    <script src="../../../lib/layui/layui.js" charset="utf-8"></script>
+    <script src="../../../js/xadmin.js" type="text/javascript"></script>
+</head>
+<body>
+    <div class="x-nav">
+                      <span class="layui-breadcrumb">
+                        <a href="javascript:;">标的管理</a>
+                        <a href="javascript:;">普通标</a>
+                        <a><cite>添加标借款人</cite></a>
+                      </span>
+        <a class="layui-btn layui-btn-small" style="line-height:1.6em;margin-top:3px;float:right"
+           href="javascript:location.replace(location.href);" title="刷新">
+            <i class="layui-icon" style="line-height:30px">ဂ</i></a>
+    </div>
+    <div class="x-body">
+        <div class="layui-progress layui-progress-big" lay-showpercent="true">
+            <div class="layui-progress-bar" lay-percent="50%"></div>
+        </div>
+        <form class="layui-form layui-form-pane" action="">
+            <div class="sbuBtnBox">
+                <button class="layui-btn x-bg-lightGray"><i class="layui-icon">&#xe646;</i>跳过</button>
+                <button class="layui-btn x-bg-lightGreen" lay-submit="" lay-filter="demo1" onclick="clickJump('add-introduce.html')"><i class="layui-icon">&#xe642;</i>提交</button>
+            </div>
+            <div class="layui-form-item x-fontSize-16 x-m-bot-20 x-fontWeight">
+                项目介绍
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-inline">
+                    <label class="layui-form-label">项目名称</label>
+                    <div class="layui-input-inline">
+                        <input type="text" name="phone" lay-verify="title" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+            </div>
+            <div class="layui-form-item layui-form-text">
+                <label class="layui-form-label">项目内容</label>
+                <div class="layui-input-block">
+                    <textarea placeholder="请输入内容" class="layui-textarea"></textarea>
+                </div>
+            </div>
+
+            <div>
+                <div class="layui-btn"><i class="layui-icon">&#xe61f;</i>添加图片</div>
+                <div class="loadImgBox">
+                    <div class="choiceImg">
+                        <img src="" alt="">
+                        <input type="file" title="选择图片" onchange="showImg(this)">
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+<script>
+    //获取图片地址显示图片
+    function showImg(imgId){
+        var $this = $(imgId);
+        var imgUrl = window.URL.createObjectURL(imgId.files[0]);
+        $this.prev().attr("src",imgUrl)
+    };
+</script>
+</html>

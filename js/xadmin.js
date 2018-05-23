@@ -184,3 +184,48 @@ function GetQueryString(name)
     var r = window.location.search.substr(1).match(reg);
     if(r!=null)return  unescape(r[2]); return null;
 }
+
+// 添加图片
+function addImgFun(addImgId) {
+    var $this = $(addImgId)
+    $this.next().append(
+        '<div class="loadImgBox">'+
+        '<div class="choiceImg">'+
+        '<img src="../../../images/choice_uploadImg.png" alt="">'+
+        '<input type="file" title="点击选择图片" onchange="showImg(this)">'+
+        '<div class="removeBtn" onclick="removeImg(this)"> x </div>'+
+        '</div>'+
+        '<div class="describeImg">'+
+        '<input type="text" placeholder="请输入图片描述" class="layui-input">'+
+        '</div>'+
+        '</div>'
+    )
+}
+
+//获取图片地址显示图片
+function showImg(imgId){
+    var $this = $(imgId);
+    var imgUrl = window.URL.createObjectURL(imgId.files[0]);
+    //判断选中的是否是图片
+    var imgVal = $this.val();
+    if (imgVal == "") {
+        layer.msg("请上传图片");
+        return false;
+    }
+    else {
+        if (!/\.(gif|jpg|jpeg|png|GIF|JPG|PNG)$/.test(imgVal)) {
+            layer.msg("图片格式不正确")
+            return false;
+        }
+    }
+    $this.prev().attr("src",imgUrl)
+    $this.next().show();
+    console.log($this.val());
+};
+
+// 删除图片
+function removeImg(removeBtnId) {
+    var $this = $(removeBtnId);
+    $this.parent().parent().remove();
+}
+

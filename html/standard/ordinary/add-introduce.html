@@ -33,44 +33,120 @@
         <form class="layui-form layui-form-pane" action="">
             <div class="sbuBtnBox">
                 <button class="layui-btn x-bg-lightGray"><i class="layui-icon">&#xe646;</i>跳过</button>
-                <button class="layui-btn x-bg-lightGreen" lay-submit="" lay-filter="demo1" onclick="clickJump('add-introduce.html')"><i class="layui-icon">&#xe642;</i>提交</button>
+                <div class="layui-btn x-bg-lightGreen" lay-submit="" lay-filter="formDemo"><i class="layui-icon">&#xe642;</i>提交</div>
             </div>
             <div class="layui-form-item x-fontSize-16 x-m-bot-20 x-fontWeight">
+                <hr>
                 项目介绍
+                <div class="addProjectBtn" onclick="addProject(this)">
+                    <i class="layui-icon">&#xe61f;</i>
+                </div>
+                <hr class="layui-bg-black">
             </div>
-            <div class="layui-form-item">
-                <div class="layui-inline">
-                    <label class="layui-form-label">项目名称</label>
-                    <div class="layui-input-inline">
-                        <input type="text" name="phone" lay-verify="title" autocomplete="off" class="layui-input">
+            <!--介绍内容-->
+            <div class="projectBox">
+                <!--<div class="removeProBtn" onclick="removeProFun(this)"><i class="layui-icon">&#x1006;</i></div>-->
+                <div class="layui-form-item">
+                    <div class="layui-inline">
+                        <label class="layui-form-label">项目名称</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="projectName" lay-verify="title" autocomplete="off" class="layui-input">
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="layui-form-item layui-form-text">
-                <label class="layui-form-label">项目内容</label>
-                <div class="layui-input-block">
-                    <textarea placeholder="请输入内容" class="layui-textarea"></textarea>
+                <div class="layui-form-item layui-form-text">
+                    <label class="layui-form-label">项目内容</label>
+                    <div class="layui-input-block">
+                        <textarea placeholder="请输入内容" class="layui-textarea"></textarea>
+                    </div>
+                </div>
+
+                <div class="addImgBox">
+                    <div class="layui-btn" onclick="addImgFun(this)"><i class="layui-icon">&#xe61f;</i>添加图片</div>
+                    <div class="imgBox" id="imgBox">
+                        <div class="loadImgBox">
+                            <div class="choiceImg">
+                                <!--选中后显示图片-->
+                                <img src="../../../images/choice_uploadImg.png" alt="">
+                                <input type="file" title="点击选择图片" onchange="showImg(this)">
+                                <!--<div class="removeBtn" onclick="removeImg(this)">-->
+                                <!--x-->
+                                <!--</div>-->
+                            </div>
+                            <div class="describeImg">
+                                <input type="text" placeholder="请输入图片描述" class="layui-input">
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <div>
-                <div class="layui-btn"><i class="layui-icon">&#xe61f;</i>添加图片</div>
-                <div class="loadImgBox">
-                    <div class="choiceImg">
-                        <img src="" alt="">
-                        <input type="file" title="选择图片" onchange="showImg(this)">
-                    </div>
-                </div>
-            </div>
         </form>
     </div>
 </body>
 <script>
-    //获取图片地址显示图片
-    function showImg(imgId){
-        var $this = $(imgId);
-        var imgUrl = window.URL.createObjectURL(imgId.files[0]);
-        $this.prev().attr("src",imgUrl)
-    };
+
+    layui.use('form', function(){
+        var form = layui.form;
+
+        //监听提交
+        form.on('submit(formDemo)', function(data){
+            console.log(data.field)
+            layer.msg(JSON.stringify(data.field));
+
+            // return false;
+            window.location.href = 'add-riskControl.html'
+        });
+    });
+
+    //添加项目
+    function addProject(addProjectId) {
+        var $this = $(addProjectId);
+        $this.parent().parent().append(
+            '<div class="projectBox">'+
+            '<hr class="layui-bg-black">'+
+            '<div class="removeProBtn" onclick="removeProFun(this)"><i class="layui-icon">&#x1006;</i></div>'+
+            '<div class="layui-form-item x-m-top-20">'+
+            '<div class="layui-inline">'+
+            '<label class="layui-form-label">项目名称</label>'+
+            '<div class="layui-input-inline">'+
+            '<input type="text" name="projectName2" lay-verify="title" autocomplete="off" class="layui-input">'+
+            '</div>'+
+            '</div>'+
+            '</div>'+
+            '<div class="layui-form-item layui-form-text">'+
+            '<label class="layui-form-label">项目内容</label>'+
+            '<div class="layui-input-block">'+
+            '<textarea placeholder="请输入内容" class="layui-textarea"></textarea>'+
+            '</div>'+
+            '</div>'+
+            '<div class="addImgBox">'+
+            '<div class="layui-btn" onclick="addImgFun(this)"><i class="layui-icon">&#xe61f;</i>添加图片</div>'+
+            '<div class="imgBox" id="imgBox">'+
+            '<div class="loadImgBox">'+
+            '<div class="choiceImg">'+
+            '<!--选中后显示图片-->'+
+            '<img src="../../../images/choice_uploadImg.png" alt="">'+
+            '<input type="file" title="点击选择图片" onchange="showImg(this)">'+
+            '</div>'+
+            '<div class="describeImg">'+
+            '<input type="text" placeholder="请输入图片描述" class="layui-input">'+
+            '</div>'+
+            '</div>'+
+            '</div>'+
+            '</div>'+
+            '</div>'
+        )
+        layer.msg('已添加', {icon: 6});
+    }
+
+    // 删除项目
+    function removeProFun(removeProId) {
+        var $this = $(removeProId);
+        $this.parent().remove();
+        layer.msg('已删除', {icon: 5});
+    }
+
+
 </script>
 </html>

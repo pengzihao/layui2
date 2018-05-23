@@ -36,6 +36,7 @@
                 <button class="layui-btn x-bg-lightGreen" lay-submit="" lay-filter="demo1" onclick="clickJump('add-introduce.html')"><i class="layui-icon">&#xe642;</i>提交</button>
             </div>
             <div class="layui-form-item x-fontSize-16 x-m-bot-20 x-fontWeight">
+                <hr>
                 借款人信息
             </div>
             <div class="layui-form-item">
@@ -214,13 +215,24 @@
 
 </body>
 <script>
-    layui.use('laydate', function() {
+    layui.use(['form','laydate'], function(){
+        var form = layui.form;
         var laydate = layui.laydate;
 
         //常规用法
         laydate.render({
             elem: '#test1'
         });
-    })
+
+        //监听提交
+        form.on('submit(formDemo)', function(data){
+            console.log(data.field)
+            layer.msg(JSON.stringify(data.field));
+
+            // return false;
+            window.location.href = 'add-introduce.html'
+        });
+    });
+
 </script>
 </html>
